@@ -334,6 +334,7 @@ export class AngularEditorToolbarComponent {
 
   watchUploadImage(response: HttpResponse<{imageUrl: string}>, event) {
     const { imageUrl } = response.body;
+    console.log(imageUrl)
     this.editorService.insertImage(imageUrl);
     event.srcElement.value = null;
   }
